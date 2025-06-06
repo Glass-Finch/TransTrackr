@@ -1,0 +1,32 @@
+{
+    "CA": {
+      "name": "California",
+      "status": "positive",
+      "summary": "California has comprehensive protections for transgender rights including healthcare access, anti-discrimination laws, and inclusive school policies.",
+      "lastUpdated": "2024-01-15"
+    },
+    "TX": {
+      "name": "Texas",
+      "status": "negative",
+      "summary": "Texas has passed multiple restrictive laws limiting transgender healthcare for minors and transgender student participation in sports.",
+      "lastUpdated": "2024-01-15"
+    },
+    "NY": {
+      "name": "New York",
+      "status": "positive",
+      "summary": "New York provides strong legal protections for transgender individuals including healthcare coverage and anti-discrimination policies.",
+      "lastUpdated": "2024-01-15"
+    },
+    "FL": {
+      "name": "Florida",
+      "status": "negative",
+      "summary": "Florida has enacted several laws restricting transgender rights including healthcare bans and sports participation limits.",
+      "lastUpdated": "2024-01-15"
+    },
+    "WA": {
+      "name": "Washington",
+      "status": "positive",
+      "summary": "Washington state offers comprehensive protections including healthcare access and anti-discrimination laws for transgender residents.",
+      "lastUpdated": "2024-01-15"
+    }
+}
