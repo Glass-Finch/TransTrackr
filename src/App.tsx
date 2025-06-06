@@ -6,6 +6,7 @@ import styles from './App.module.css'
 import initialStatesData from './data/states-data.json'
 
 // Fix Leaflet default icon issue
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 delete (L.Icon.Default.prototype as any)._getIconUrl
 L.Icon.Default.mergeOptions({
   iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
@@ -22,18 +23,74 @@ interface StateInfo {
   lastUpdated: string
 }
 
+// Add state name to code mapping
+const stateNameToCode: Record<string, string> = {
+  'Alabama': 'AL',
+  'Alaska': 'AK',
+  'Arizona': 'AZ',
+  'Arkansas': 'AR',
+  'California': 'CA',
+  'Colorado': 'CO',
+  'Connecticut': 'CT',
+  'Delaware': 'DE',
+  'District of Columbia': 'DC',
+  'Florida': 'FL',
+  'Georgia': 'GA',
+  'Hawaii': 'HI',
+  'Idaho': 'ID',
+  'Illinois': 'IL',
+  'Indiana': 'IN',
+  'Iowa': 'IA',
+  'Kansas': 'KS',
+  'Kentucky': 'KY',
+  'Louisiana': 'LA',
+  'Maine': 'ME',
+  'Maryland': 'MD',
+  'Massachusetts': 'MA',
+  'Michigan': 'MI',
+  'Minnesota': 'MN',
+  'Mississippi': 'MS',
+  'Missouri': 'MO',
+  'Montana': 'MT',
+  'Nebraska': 'NE',
+  'Nevada': 'NV',
+  'New Hampshire': 'NH',
+  'New Jersey': 'NJ',
+  'New Mexico': 'NM',
+  'New York': 'NY',
+  'North Carolina': 'NC',
+  'North Dakota': 'ND',
+  'Ohio': 'OH',
+  'Oklahoma': 'OK',
+  'Oregon': 'OR',
+  'Pennsylvania': 'PA',
+  'Rhode Island': 'RI',
+  'South Carolina': 'SC',
+  'South Dakota': 'SD',
+  'Tennessee': 'TN',
+  'Texas': 'TX',
+  'Utah': 'UT',
+  'Vermont': 'VT',
+  'Virginia': 'VA',
+  'Washington': 'WA',
+  'West Virginia': 'WV',
+  'Wisconsin': 'WI',
+  'Wyoming': 'WY',
+  'Puerto Rico': 'PR'
+}
+
 interface GeoJSONFeature {
   type: string
   properties: {
-    NAME: string
-    STUSPS: string
+    name: string
+    density: number
   }
-  geometry: any
+  geometry: Record<string, unknown>
 }
 
 function App() {
-  const [geoJsonData, setGeoJsonData] = useState<any>(null)
-  const [statesInfo, setStatesInfo] = useState<Record<string, StateInfo>>(initialStatesData as Record<string, StateInfo>)
+  const [geoJsonData, setGeoJsonData] = useState<unknown>(null)
+  const [statesInfo] = useState<Record<string, StateInfo>>(initialStatesData as Record<string, StateInfo>)
   const [selectedState, setSelectedState] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [loadingPhase, setLoadingPhase] = useState<'map' | 'data'>('map')
@@ -55,7 +112,7 @@ function App() {
         setTimeout(() => {
           setIsLoading(false)
         }, 500)
-      } catch (err) {
+      } catch {
         setError('Unable to load map data. Please try again.')
         setIsLoading(false)
       }
@@ -83,7 +140,7 @@ function App() {
   // Style function for GeoJSON features
   const styleFeature = (feature: GeoJSONFeature | undefined) => {
     if (!feature) return {}
-    const stateCode = feature.properties.STUSPS
+    const stateCode = stateNameToCode[feature.properties.name]
     return {
       fillColor: getStateColor(stateCode),
       weight: 1,
@@ -94,10 +151,9 @@ function App() {
   }
 
   // Handle feature interactions
-// In the onEachFeature function, add:
 const onEachFeature = (feature: GeoJSONFeature, layer: L.Layer) => {
-  const stateCode = feature.properties.STUSPS
-  console.log('State found:', stateCode, feature.properties.NAME) // ADD THIS
+  const stateCode = stateNameToCode[feature.properties.name]
+  console.log('State found:', stateCode, feature.properties.name) // ADD THIS
   
   layer.on({
     click: () => {

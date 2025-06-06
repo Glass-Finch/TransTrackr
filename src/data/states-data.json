@@ -1,32 +1,387 @@
 {
-    "CA": {
-      "name": "California",
-      "status": "positive",
-      "summary": "California has comprehensive protections for transgender rights including healthcare access, anti-discrimination laws, and inclusive school policies.",
-      "lastUpdated": "2024-01-15"
+  "CA": {
+    "name": "California",
+    "status": "positive",
+    "statusReason": ["healthcare", "legalRecognition", "antiDiscrimination"],
+    "concerns": {
+      "healthcare": {
+        "minorBan": false,
+        "adultRestrictions": "none",
+        "criminalPenalty": false,
+        "shieldLaw": true,
+        "_updated": "2025-06-05"
+      },
+      "legalRecognition": {
+        "bcSelfAttest": true,
+        "dlSelfAttest": true,
+        "xMarker": true,
+        "_updated": "2025-06-05"
+      },
+      "antiDiscrimination": {
+        "employment": true,
+        "housingPublicAcc": true,
+        "insuranceCoverage": true,
+        "_updated": "2025-06-05"
+      },
+      "safetyJustice": {
+        "hateCrimeCoversGI": true,
+        "panicDefenseBanned": true,
+        "prisonPlacementGI": "required",
+        "_updated": "2025-06-05"
+      },
+      "youthSchool": {
+        "forcedOutingBan": true,
+        "bathroomAccess": "inclusive",
+        "sportsAccess": "inclusive",
+        "_updated": "2025-06-05"
+      },
+      "familyRights": {
+        "affirmingAbuse": null,
+        "custodyPreferenceAffirm": false,
+        "adoptionInclusive": true,
+        "_updated": "2025-06-05"
+      },
+      "violenceData": {
+        "homicides2024": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "hateCrimes2023": {
+          "count": 65,
+          "ratePer100k": 0.17
+        },
+        "stateFundsPrevention": null,
+        "_updated": "2025-06-05"
+      }
     },
-    "TX": {
-      "name": "Texas",
-      "status": "negative",
-      "summary": "Texas has passed multiple restrictive laws limiting transgender healthcare for minors and transgender student participation in sports.",
-      "lastUpdated": "2024-01-15"
+    "summary": "California is effectively a sanctuary for transgender people: SB 107 shields families and providers of gender-affirming care, and the state imposes no bans or penalties on youth or adult treatment. Residents can self-attest to change identity documents, are covered by comprehensive anti-discrimination laws, and benefit from statutes that ban the trans-panic defense, require prisons to house people by gender identity, and bar schools from outing or excluding trans students. Still, the Attorney General documented 65 anti-trans hate-crime events in 2023, underscoring that legal progress has not eliminated safety concerns.",
+    "sources": [
+      "https://legiscan.com/CA/text/SB107/id/2605932",
+      "https://lgbtq.ucsf.edu/gender-recognition-act",
+      "https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2017/06/InitStmtofReasonsRegTransgenderIdExp.pdf?utm_source=chatgpt.com",
+      "https://www.leginfo.ca.gov/pub/13-14/bill/asm/ab_2501-2550/ab_2501_cfa_20140623_110700_sen_comm.html?utm_source=chatgpt.com",
+      "https://www.cdcr.ca.gov/prea/sb-132-faqs/",
+      "https://calmatters.org/education/k-12-education/2024/12/california-forced-outing-lgbtq-new-laws-2025/",
+      "https://www.nclrights.org/our-work/legislation-policy/school-success-and-opportunity-act/?utm_source=chatgpt.com",
+      "https://www.gov.ca.gov/wp-content/uploads/2023/09/AB-957-Veto-Message.pdf?utm_source=chatgpt.com",
+      "https://oag.ca.gov/system/files/media/care-hate-crime-2023-presentation-07092024.pdf?utm_source=chatgpt.com",
+      "https://oag.ca.gov/new-press-categories/open-justice?utm_source=chatgpt.com"
+    ],
+    "lastUpdated": "2025-06-05"
+  },
+  "TX": {
+    "name": "Texas",
+    "status": "negative",
+    "statusReason": [
+      "healthcare",
+      "legalRecognition",
+      "antiDiscrimination",
+      "youthSchool"
+    ],
+    "concerns": {
+      "healthcare": {
+        "minorBan": true,
+        "adultRestrictions": "medicaid",
+        "criminalPenalty": true,
+        "shieldLaw": false,
+        "_updated": "2025-06-05"
+      },
+      "legalRecognition": {
+        "bcSelfAttest": false,
+        "dlSelfAttest": false,
+        "xMarker": false,
+        "_updated": "2025-06-05"
+      },
+      "antiDiscrimination": {
+        "employment": false,
+        "housingPublicAcc": false,
+        "insuranceCoverage": false,
+        "_updated": "2025-06-05"
+      },
+      "safetyJustice": {
+        "hateCrimeCoversGI": false,
+        "panicDefenseBanned": false,
+        "prisonPlacementGI": "case-by-case",
+        "_updated": "2025-06-05"
+      },
+      "youthSchool": {
+        "forcedOutingBan": false,
+        "bathroomAccess": "restrictive",
+        "sportsAccess": "restrictive",
+        "_updated": "2025-06-05"
+      },
+      "familyRights": {
+        "affirmingAbuse": true,
+        "custodyPreferenceAffirm": null,
+        "adoptionInclusive": false,
+        "_updated": "2025-06-05"
+      },
+      "violenceData": {
+        "homicides2024": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "hateCrimes2023": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "stateFundsPrevention": null,
+        "_updated": "2025-06-05"
+      }
     },
-    "NY": {
-      "name": "New York",
-      "status": "positive",
-      "summary": "New York provides strong legal protections for transgender individuals including healthcare coverage and anti-discrimination policies.",
-      "lastUpdated": "2024-01-15"
+    "summary": "Texas has enacted sweeping restrictions on transgender rights: SB 14 bars gender-affirming care for minors and imposes penalties on providers, the attorney general labels such care child abuse, and Medicaid now excludes adult coverage. The state blocks updates to gender markers on identity documents and offers no statewide non-discrimination protections. Hate-crime law omits gender identity, the “panic” defense remains legal, and prisons house trans people case-by-case, usually by birth sex. Schools must not facilitate social transition, bathrooms and sports teams are restricted by sex, and adoption agencies may refuse LGBTQ parents. Together these policies make Texas one of the most hostile states for trans residents despite ongoing community resistance.",
+    "sources": [
+      "https://www.texastribune.org/2023/06/02/texas-gender-affirming-care-ban/",
+      "https://legiscan.com/TX/text/SB14/id/2756089",
+      "https://www.texasattorneygeneral.gov/news/releases/ag-paxton-declares-so-called-sex-change-procedures-children-and-prescription-puberty-blockers-be",
+      "https://www.advocate.com/news/texas-gender-affirming-care-medicaid",
+      "https://guides.sll.texas.gov/identity-documents/correcting-errors",
+      "https://dps.transtexas.org/",
+      "https://www.texastribune.org/2020/06/15/bostock-supreme-court-texas-lgbtq/",
+      "https://equalitytexas.org/hate-crimes/",
+      "https://lgbtqbar.org/programs/advocacy/gay-trans-panic-defense",
+      "https://lgbtqbar.org/bar-news/tiproject/tx-transgender-housing-policy/",
+      "https://www.texasobserver.org/texas-lege-2025-anti-lgbtq-bills-passed/",
+      "https://www.texastribune.org/2023/05/17/texas-transgender-college-athletes-ban/",
+      "https://www.chron.com/news/houston-texas/education/article/conroe-isd-board-19983916.php",
+      "https://www.texastribune.org/2017/06/15/abbott-signs-religious-protections-child-welfare-agencies/",
+      "https://www.texastribune.org/2023/12/14/texas-hate-crimes-data/"
+    ],
+    "lastUpdated": "2025-06-05"
+  },
+  "NY": {
+    "name": "New York",
+    "status": "positive",
+    "statusReason": [
+      "healthcare",
+      "legalRecognition",
+      "antiDiscrimination",
+      "youthSchool"
+    ],
+    "concerns": {
+      "healthcare": {
+        "minorBan": false,
+        "adultRestrictions": "none",
+        "criminalPenalty": false,
+        "shieldLaw": true,
+        "_updated": "2025-06-05"
+      },
+      "legalRecognition": {
+        "bcSelfAttest": true,
+        "dlSelfAttest": true,
+        "xMarker": true,
+        "_updated": "2025-06-05"
+      },
+      "antiDiscrimination": {
+        "employment": true,
+        "housingPublicAcc": true,
+        "insuranceCoverage": true,
+        "_updated": "2025-06-05"
+      },
+      "safetyJustice": {
+        "hateCrimeCoversGI": true,
+        "panicDefenseBanned": true,
+        "prisonPlacementGI": "case-by-case",
+        "_updated": "2025-06-05"
+      },
+      "youthSchool": {
+        "forcedOutingBan": null,
+        "bathroomAccess": "inclusive",
+        "sportsAccess": "inclusive",
+        "_updated": "2025-06-05"
+      },
+      "familyRights": {
+        "affirmingAbuse": false,
+        "custodyPreferenceAffirm": null,
+        "adoptionInclusive": true,
+        "_updated": "2025-06-05"
+      },
+      "violenceData": {
+        "homicides2024": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "hateCrimes2023": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "stateFundsPrevention": null,
+        "_updated": "2025-06-05"
+      }
     },
-    "FL": {
-      "name": "Florida",
-      "status": "negative",
-      "summary": "Florida has enacted several laws restricting transgender rights including healthcare bans and sports participation limits.",
-      "lastUpdated": "2024-01-15"
+    "summary": "New York functions as a sanctuary state for transgender people: a 2023 shield law blocks out-of-state subpoenas and custody actions related to gender-affirming care, while no bans or penalties apply to youth or adult treatment.  Residents can self-attest to update birth certificates and driver licences and may choose an “X” marker.  GENDA and related regulations prohibit gender-identity discrimination in employment, housing, public accommodations and insurance, and Medicaid explicitly covers gender-affirming care.  Hate-crime law includes gender identity, the trans-panic defense is barred, and prison housing is handled case-by-case under PREA-based policy.  Schools must allow inclusive restroom and athletics access, though there is no explicit statewide ban on forced outing.  Adoption and foster-care laws protect LGBTQ parents, leaving New York among the strongest states for trans rights despite ongoing safety and data-collection gaps.",
+    "sources": [
+      "https://www.nysenate.gov/legislation/bills/2023/S2475/amendment/B",
+      "https://www.them.us/story/new-york-safe-haven-state-transgender-youth",
+      "https://www.governor.ny.gov/news/governor-hochul-announces-new-yorkers-can-now-choose-x-gender-marker-nys-driver-license-and-id",
+      "https://www.health.ny.gov/vital_records/gender_designation_corrections.htm",
+      "https://dhr.ny.gov/genda",
+      "https://www.dfs.ny.gov/consumers/health_insurance/transgender_healthcare",
+      "https://www.nysenate.gov/legislation/bills/2019/S6573",
+      "https://www.nysenate.gov/legislation/laws/PEN/485.05",
+      "https://www.nysed.gov/sites/default/files/programs/student-support-services/creating-a-safe-supportive-and-affirming-school-environment-for-transgender-and-gender-expansive-students-faq-2023.pdf",
+      "https://www.lgbtmap.org/equality-maps/foster_and_adoption_laws",
+      "https://doccs.ny.gov/system/files/documents/2024/06/edgecombe-residential-treatment-facility-final-prea-audit-report-5.28.2024.pdf",
+      "https://en.wikipedia.org/wiki/2020s_anti-LGBTQ_movement_in_the_United_States#Gender_transition"
+    ],
+    "lastUpdated": "2025-06-05"
+  },
+  "FL": {
+    "name": "Florida",
+    "status": "negative",
+    "statusReason": [
+      "healthcare",
+      "legalRecognition",
+      "antiDiscrimination",
+      "youthSchool"
+    ],
+    "concerns": {
+      "healthcare": {
+        "minorBan": true,
+        "adultRestrictions": "telehealth",
+        "criminalPenalty": true,
+        "shieldLaw": false,
+        "_updated": "2025-06-05"
+      },
+      "legalRecognition": {
+        "bcSelfAttest": false,
+        "dlSelfAttest": false,
+        "xMarker": false,
+        "_updated": "2025-06-05"
+      },
+      "antiDiscrimination": {
+        "employment": false,
+        "housingPublicAcc": false,
+        "insuranceCoverage": false,
+        "_updated": "2025-06-05"
+      },
+      "safetyJustice": {
+        "hateCrimeCoversGI": true,
+        "panicDefenseBanned": false,
+        "prisonPlacementGI": "case-by-case",
+        "_updated": "2025-06-05"
+      },
+      "youthSchool": {
+        "forcedOutingBan": false,
+        "bathroomAccess": "restrictive",
+        "sportsAccess": "restrictive",
+        "_updated": "2025-06-05"
+      },
+      "familyRights": {
+        "affirmingAbuse": true,
+        "custodyPreferenceAffirm": false,
+        "adoptionInclusive": null,
+        "_updated": "2025-06-05"
+      },
+      "violenceData": {
+        "homicides2024": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "hateCrimes2023": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "stateFundsPrevention": null,
+        "_updated": "2025-06-05"
+      }
     },
-    "WA": {
-      "name": "Washington",
-      "status": "positive",
-      "summary": "Washington state offers comprehensive protections including healthcare access and anti-discrimination laws for transgender residents.",
-      "lastUpdated": "2024-01-15"
-    }
+    "summary": "Florida enacted SB 254 in 2023, banning gender-affirming care for minors, imposing felony penalties on providers, and allowing courts to seize emergency custody of trans youth from affirming parents. Adult patients now face strict in-person and telehealth limits, and the state continues to defend its Medicaid exclusion despite a federal ruling striking it down. The DMV has halted gender-marker updates and birth-certificate changes still require a doctor’s letter, with no “X” option. Florida lacks a statewide gender-identity nondiscrimination law and offers no insurance mandate for transition care. Hate-crime statutes cover gender identity, but the trans-panic defense is still legal. HB 1521 criminalises bathroom use that differs from birth sex in public buildings, schools, and prisons, and SB 1028 bars trans girls and women from female sports teams. Expanded “Parental Rights” rules (HB 1069) effectively force schools to out trans students by requiring parental sign-off for names and pronouns. Prison housing is determined case-by-case, often defaulting to birth sex. With no shield law and policies that treat parental affirmation as potential abuse, Florida is currently one of the most hostile states for trans residents.",
+    "sources": [
+      "https://www.flsenate.gov/Session/Bill/2023/254",
+      "https://lambdalegal.org/newsroom/dekker_fl_20230621_victory-court-voids-florida-policy-prohibiting-medicaid-coverage-of-gender-affirming-care",
+      "https://19thnews.org/2024/03/florida-trans-drivers-license-federal-law",
+      "https://www.flsenate.gov/Session/Bill/2023/1521",
+      "https://www.gray-robinson.com/insights/post/4528/grayrobinson-higher-education-team-complying-with-floridas-safety-in-private-spaces-act",
+      "https://www.eqfl.org/lgbtq-protections",
+      "https://www.lgbtmap.org/equality-maps/panic_defense_bans",
+      "https://lgbtqbar.org/bar-news/tiproject/fl-transgender-housing-policies",
+      "https://www.edweek.org/policy-politics/florida-just-expanded-the-dont-say-gay-law-heres-what-you-need-to-know/2023/04",
+      "https://apnews.com/article/transgender-students-pronouns-florida",
+      "https://codes.findlaw.com/fl/title-xlvi-crimes/fl-st-sect-775-085/",
+      "https://www.bonderudlaw.com/blog/hate-crimes-in-florida-definition-and-penalties/",
+      "https://www.fisherphillips.com/en/news-insights/how-floridas-new-bathroom-law-will-impact-schools-public-employers-and-businesses.html"
+    ],
+    "lastUpdated": "2025-06-05"
+  },
+  "WA": {
+    "name": "Washington",
+    "status": "positive",
+    "statusReason": [
+      "healthcare",
+      "legalRecognition",
+      "antiDiscrimination",
+      "youthSchool"
+    ],
+    "concerns": {
+      "healthcare": {
+        "minorBan": false,
+        "adultRestrictions": "none",
+        "criminalPenalty": false,
+        "shieldLaw": true,
+        "_updated": "2025-06-05"
+      },
+      "legalRecognition": {
+        "bcSelfAttest": true,
+        "dlSelfAttest": true,
+        "xMarker": true,
+        "_updated": "2025-06-05"
+      },
+      "antiDiscrimination": {
+        "employment": true,
+        "housingPublicAcc": true,
+        "insuranceCoverage": true,
+        "_updated": "2025-06-05"
+      },
+      "safetyJustice": {
+        "hateCrimeCoversGI": true,
+        "panicDefenseBanned": true,
+        "prisonPlacementGI": "case-by-case",
+        "_updated": "2025-06-05"
+      },
+      "youthSchool": {
+        "forcedOutingBan": null,
+        "bathroomAccess": "inclusive",
+        "sportsAccess": "inclusive",
+        "_updated": "2025-06-05"
+      },
+      "familyRights": {
+        "affirmingAbuse": false,
+        "custodyPreferenceAffirm": null,
+        "adoptionInclusive": true,
+        "_updated": "2025-06-05"
+      },
+      "violenceData": {
+        "homicides2024": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "hateCrimes2023": {
+          "count": null,
+          "ratePer100k": null
+        },
+        "stateFundsPrevention": null,
+        "_updated": "2025-06-05"
+      }
+    },
+    "summary": "Washington is broadly protective of transgender rights: a 2023 shield law (HB 1469) blocks cooperation with out-of-state investigations of gender-affirming care, there are no bans or penalties on treatment, and public or private insurance must cover that care.  Residents can self-attest to update birth certificates and driver licences, including an “X” marker, and the state’s civil-rights law bars gender-identity discrimination in employment, housing, and public accommodations.  Hate-crime statutes expressly protect gender identity and the state has banned the trans-panic defense, though prison housing decisions remain case-by-case.  Schools must allow trans students access to restrooms and sports teams that match their gender identity, but there is no explicit statewide law against forced outing of students.  Washington also prohibits discrimination in adoption and foster care, yet comprehensive violence data for 2023-24 are not yet published.",
+    "sources": [
+      "https://app.leg.wa.gov/billsummary?BillNumber=1469&Year=2023",
+      "https://williamsinstitute.law.ucla.edu/wp-content/uploads/Shield-Law-WA-Sep-2024.pdf",
+      "https://doh.wa.gov/licenses-permits-and-certificates/vital-records/sex-designation-change-birth-certificate",
+      "https://dol.wa.gov/driver-licenses-and-permits/update-driver-license-information/change-your-gender-designation",
+      "https://app.leg.wa.gov/rcw/default.aspx?cite=49.60",
+      "https://lawfilesext.leg.wa.gov/biennium/2021-22/Pdf/Bill%20Reports/Senate/5313%20SBA%20WM%2021.pdf",
+      "https://apps.leg.wa.gov/RCW/default.aspx?cite=9A.36.080",
+      "https://senatedemocrats.wa.gov/blog/2020/03/05/governor-approves-ban-on-panic-defense-in-lgbtq-assault-cases/",
+      "https://www.doc.wa.gov/news/2023/spotlight/transgender-housing-policy.htm",
+      "https://ospi.k12.wa.us/policy-funding/equity-and-civil-rights/resources-school-districts-civil-rights-washington-schools/gender-inclusive-schools",
+      "https://columbiabasinherald.com/news/2025/apr/23/wiaa-votes-against-trans-athlete-policy-changes/",
+      "https://www.lgbtmap.org/equality-maps/foster_and_adoption_laws",
+      "https://lawfilesext.leg.wa.gov/biennium/2023-24/Htm/Bill%20Reports/Senate/5427%20SBA%20LAW%2023.htm",
+      "https://www.atg.wa.gov/news/news-releases/ag-ferguson-will-pilot-hate-crimes-hotline-clark-king-and-spokane-counties",
+      "https://www.justice.gov/hatecrimes/state-data/washington"
+    ],
+    "lastUpdated": "2025-06-05"
+  }
 }
